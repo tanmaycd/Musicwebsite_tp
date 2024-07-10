@@ -1,0 +1,176 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #1e1e1e;
+    color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .search-songs-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #282828;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background: #1e1e1e;
+    color: #f1f1f1;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: border 0.3s ease;
+  }
+  
+  .search-input:focus {
+    border: 2px solid #4CAF50;
+    outline: none;
+  }
+  
+  .songs-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .song-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background: #333;
+    transition: background 0.3s ease;
+  }
+  
+  .song-item:hover {
+    background: #444;
+  }
+  
+  .song-details h3 {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .song-details p {
+    margin: 5px 0 10px;
+    color: #ccc;
+  }
+  
+  .audio-controls {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .play-pause-button {
+    background: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .play-pause-button:hover {
+    background: #45a049;
+    transform: scale(1.1);
+  }
+  
+  .progress-bar {
+    width: 100%;
+    appearance: none;
+    height: 10px;
+    border-radius: 5px;
+    background: #1e1e1e;
+    outline: none;
+    transition: background 0.3s ease;
+  }
+  
+  .progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+  
+  .progress-bar::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+  
+  .favorite-button,
+  .playlist-button,
+  .add-button,
+  .create-button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #4CAF50;
+    color: #fff;
+    transition: background 0.3s ease;
+  }
+  
+  .favorite-button:hover,
+  .playlist-button:hover,
+  .add-button:hover,
+  .create-button:hover {
+    background: #45a049;
+  }
+  
+  .playlist-options {
+    margin-top: 10px;
+  }
+  
+  .playlist-options select {
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background: #1e1e1e;
+    color: #f1f1f1;
+    margin-right: 10px;
+    transition: border 0.3s ease;
+  }
+  
+  .playlist-options select:focus {
+    border: 2px solid #4CAF50;
+    outline: none;
+  }
+  
+  .create-playlist input {
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background: #1e1e1e;
+    color: #f1f1f1;
+    margin-bottom: 10px;
+    transition: border 0.3s ease;
+  }
+  
+  .create-playlist input:focus {
+    border: 2px solid #4CAF50;
+    outline: none;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

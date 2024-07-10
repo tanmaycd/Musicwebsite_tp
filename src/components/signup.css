@@ -1,0 +1,77 @@
+/* signup.css */
+
+/* Body styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #1A237E,  #424242);
+    color: white; /* Ensure text is readable */ /* Dark background color */
+    /* background-image: url('path_to_your_music_background_image.jpg'); Replace with your music background image */
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* White text color */
+  }
+  
+  .signup-container {
+    max-width: 500px;
+    margin: 150px auto; /* Adjust top margin for positioning */
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* White border with opacity */
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
+  }
+  .login-container{
+    max-width: 500px;
+    margin: 150px auto; /* Adjust top margin for positioning */
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* White border with opacity */
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
+  }
+  .signup-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group input {
+    width: 90%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* White border with opacity */
+    border-radius: 8px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #ff4500; /* Orange border color on focus */
+    background-color: rgba(255, 255, 255, 0.3); /* Lighter semi-transparent white background on focus */
+  }
+  
+  .form-group button {
+    width: 95%;
+    padding: 15px;
+    background-color: #ff4500; /* Orange button background color */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-group button:hover {
+    background-color: #dc3545; /* Darker red hover color */
+  }
+  

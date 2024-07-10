@@ -1,0 +1,45 @@
+/* PlaylistDetail.css */
+.playlist-detail-container {
+    margin: 20px;
+  }
+  
+  .playlist-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .song-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .song-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .song-info {
+    flex: 1;
+  }
+  
+  .song-details {
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .remove-button {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .remove-button:hover {
+    background-color: #d32f2f;
+  }
+  

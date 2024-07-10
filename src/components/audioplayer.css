@@ -1,0 +1,42 @@
+/* CustomAudioPlayer.css */
+.audio-player {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .play-pause-btn {
+    background-color: #1db954;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .play-pause-btn:hover {
+    background-color: #1ed760;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  /* CustomAudioPlayer.css */
+.audio-player {
+    width: 80%;
+    margin-top: 10px;
+  }
+  
+  .audio-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .audio-controls input[type="range"] {
+    width: 100%; /* Set width to 100% to extend across the container */
+  }
+  
