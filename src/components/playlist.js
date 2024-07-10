@@ -64,7 +64,7 @@ const Playlists = () => {
                 >
                   Go to Playlist
                 </Button>
-                {/* <Button
+                <Button
                   variant="contained"
                   color="secondary"
                   startIcon={<Delete />}
@@ -72,7 +72,7 @@ const Playlists = () => {
                   style={{ marginTop: '1rem' }}
                 >
                   Remove Playlist
-                </Button> */}
+                </Button>
               </CardContent>
             </Card>
           </Grid>
