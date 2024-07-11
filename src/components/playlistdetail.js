@@ -11,7 +11,7 @@ const PlaylistDetail = () => {
   useEffect(() => {
     const fetchSongs = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/playlists/${playlistId}`, {
+        const response = await axios.get(`https://musicwebbackend-1.onrender.com/api/playlists/${playlistId}`, {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         setSongs(response.data);
@@ -25,7 +25,7 @@ const PlaylistDetail = () => {
 
   const handleRemoveSong = async (songId) => {
     try {
-      await axios.delete('http://localhost:5000/api/playlists/remove-song', {
+      await axios.delete('https://musicwebbackend-1.onrender.com/api/playlists/remove-song', {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         data: { playlist_id: playlistId, song_id: songId }
       });
@@ -43,7 +43,7 @@ const PlaylistDetail = () => {
           <li key={song.id} className="song-item">
             <div className="song-info">
               <p className="song-details">{song.title} by {song.artist}</p>
-              <CustomAudioPlayer audioSrc={`http://localhost:5000/audio/${encodeURIComponent(song.file_path)}`} />
+              <CustomAudioPlayer audioSrc={`https://musicwebbackend-1.onrender.com/audio/${encodeURIComponent(song.file_path)}`} />
             </div>
             <button className="remove-button" onClick={() => handleRemoveSong(song.id)}>Remove from Playlist</button>
           </li>

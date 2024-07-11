@@ -56,7 +56,7 @@ const AudioControls = ({ song }) => {
         onLoadedMetadata={handleLoadedMetadata} 
         className="audio-element"
       >
-        <source src={`http://localhost:5000/audio/${encodeURIComponent(song.file_path)}`} type="audio/mpeg" />
+        <source src={`https://musicwebbackend-1.onrender.com/audio/${encodeURIComponent(song.file_path)}`} type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
     </div>
@@ -84,7 +84,7 @@ const SearchSongs = () => {
   useEffect(() => {
     const fetchPlaylists = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/playlists', {
+        const response = await axios.get('https://musicwebbackend-1.onrender.com/api/playlists', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setPlaylists(response.data);
@@ -99,8 +99,8 @@ const SearchSongs = () => {
   useEffect(() => {
     setIsLoading(true);
     const url = searchTerm.trim() === ''
-      ? 'http://localhost:5000/api/songs'
-      : `http://localhost:5000/api/songs?searchTerm=${encodeURIComponent(searchTerm)}`;
+      ? 'https://musicwebbackend-1.onrender.com/api/songs'
+      : `https://musicwebbackend-1.onrender.com/api/songs?searchTerm=${encodeURIComponent(searchTerm)}`;
     axios.get(url)
       .then(response => {
         setSearchResults(response.data);
@@ -114,7 +114,7 @@ const SearchSongs = () => {
 
   const handleAddToFavorites = async (songId) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/favorites/add', 
+      const response = await axios.post('https://musicwebbackend-1.onrender.com/api/favorites/add', 
         { song_id: songId }, 
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -133,7 +133,7 @@ const SearchSongs = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/playlists/add-song', 
+      const response = await axios.post('https://musicwebbackend-1.onrender.com/api/playlists/add-song', 
         { playlist_id: selectedPlaylistId, song_id: songId }, 
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -154,7 +154,7 @@ const SearchSongs = () => {
   
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/playlists/create',
+        'https://musicwebbackend-1.onrender.com/api/playlists/create',
         { name: newPlaylistName },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -181,8 +181,8 @@ const SearchSongs = () => {
 
   const handlePlayPause = (song) => {
     const audio = audioRef.current;
-    if (audio.src !== `http://localhost:5000/audio/${encodeURIComponent(song.file_path)}`) {
-      audio.src = `http://localhost:5000/audio/${encodeURIComponent(song.file_path)}`;
+    if (audio.src !== `https://musicwebbackend-1.onrender.com/audio/${encodeURIComponent(song.file_path)}`) {
+      audio.src = `https://musicwebbackend-1.onrender.com/audio/${encodeURIComponent(song.file_path)}`;
       audio.play();
       setIsPlaying(true);
     } else if (audio.paused) {

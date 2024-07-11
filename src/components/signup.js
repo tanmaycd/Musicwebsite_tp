@@ -47,7 +47,7 @@ const Signup = () => {
 
   const handleSignup = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/signup', { username, email, password });
+      const response = await axios.post('https://musicwebbackend-1.onrender.com/api/auth/signup', { username, email, password });
       if (response.status === 201) {
         navigate('/login');
       }

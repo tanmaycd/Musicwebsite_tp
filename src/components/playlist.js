@@ -14,7 +14,7 @@ const Playlists = () => {
     const fetchPlaylists = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:5000/api/playlists', {
+        const response = await axios.get('https://musicwebbackend-1.onrender.com/api/playlists', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setPlaylists(response.data);
@@ -36,7 +36,7 @@ const Playlists = () => {
   const handleRemovePlaylist = async (playlistIdToRemove) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:5000/api/playlists/${playlistIdToRemove}`, {
+      await axios.delete(`https://musicwebbackend-1.onrender.com/api/playlists/${playlistIdToRemove}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setPlaylists(playlists.filter(playlist => playlist.id !== playlistIdToRemove));

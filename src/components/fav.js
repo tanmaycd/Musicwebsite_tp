@@ -25,7 +25,7 @@ const Favorites = () => {
       const token = localStorage.getItem('token'); // Retrieve token from localStorage
       try {
         const response = await axios.get(
-          'http://localhost:5000/api/favorites', 
+          'https://musicwebbackend-1.onrender.com/api/favorites', 
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setFavorites(response.data);
@@ -51,7 +51,7 @@ const Favorites = () => {
     const token = localStorage.getItem('token'); // Retrieve token from localStorage
     try {
       await axios.delete(
-        'http://localhost:5000/api/favorites/remove', 
+        'https://musicwebbackend-1.onrender.com/api/favorites/remove', 
         { 
           headers: { Authorization: `Bearer ${token}` },
           data: { song_id: songId }  // Pass song_id in the request body for DELETE method
@@ -72,7 +72,7 @@ const Favorites = () => {
             <div className="favorite-details">
               <div className="song-info"><h3>{favorite.title}</h3>
               <p>{favorite.artist}</p></div>
-              <CustomAudioPlayer src={`http://localhost:5000/audio/${encodeURIComponent(favorite.file_path)}`} />
+              <CustomAudioPlayer src={`https://musicwebbackend-1.onrender.com/audio/${encodeURIComponent(favorite.file_path)}`} />
               <button onClick={() => handleRemoveFavorite(favorite.id)} className="remove-btn">Remove</button>
             </div>
           </li>
