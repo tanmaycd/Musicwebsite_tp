@@ -1,7 +1,11 @@
+
+
+
 import axios from 'axios';
 
-const API_URL = 'https://musicwebbackend-1.onrender.com/api';
+// const API_URL = 'https://musicwebbackend-1.onrender.com/api';
 
+const API_URL = 'http://localhost:5000/api';
 const login = (username, password) => {
   return axios.post(`${API_URL}/auth/login`, { username, password });
 };
@@ -26,7 +30,7 @@ const getFavorites = (userId) => {
 
 
 export const removeFavorite = async (userId, songId) => {
-  return await axios.delete('https://musicwebbackend-1.onrender.com/api/favorites/remove', {
+  return await axios.delete('http://localhost:5000/api/favorites/remove', {
     data: { user_id: userId, song_id: songId }
   });
 };
@@ -60,7 +64,7 @@ export const getPlaylists = async (token) => {
 };
 
 export const addFavorite = async (songId, token) => {
-  const response = await axios.post('https://musicwebbackend-1.onrender.com/api/favorites/add', 
+  const response = await axios.post('http://localhost:5000/api/favorites/add', 
     { song_id: songId }, 
     { headers: { Authorization: `Bearer ${token}` } }
   );
